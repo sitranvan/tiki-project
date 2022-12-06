@@ -1,0 +1,117 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Untitled Document</title>
+    <script language="javascript">
+
+    </script>
+
+</head>
+
+<body>
+    <div style="width:500px; margin:0 auto; border:thin solid #000">
+        <form name="frmdangkithanhvien" action="xl.php" method="post" onsubmit="return kiemtra()">
+            <table border="0" width="100%">
+                <tr>
+                    <td colspan="2" align="center"><b>ĐĂNG KÝ THÀNH VIÊN</b></td>
+                </tr>
+
+
+                <tr>
+                    <td>Tên đăng nhập</td>
+                    <td><input type="text" id="idUserName" name="nmUsername" size="30" /></td>
+                </tr>
+                <tr>
+                    <td>Mật khẩu</td>
+                    <td><input type="password" id="idPassword" name="nmPassword" size="30" /></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <hr />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2"><b>THÔNG TIN CÁ NHÂN</b></td>
+                </tr>
+
+                <tr>
+                    <td>Họ tên</td>
+                    <td><input type="text" id="idFullName" name="nmFullName" size="50" /></td>
+                </tr>
+                <tr>
+                    <td>Ngày sinh</td>
+                    <td><input type="date" id="idBirthDate" name="nmBirthDate" /></td>
+                </tr>
+                <tr>
+                    <td>Giới tính</td>
+                    <td><input type="radio" id="idMale" name="nmGender" checked="checked" />Nam<br />
+                        <input type="radio" id="idFemale" name="nmGender" />Nữ
+                    </td>
+                </tr>
+                <tr>
+                    <td>Địa chỉ email</td>
+                    <td><input type="email" id="idEmail" name="nmEmailAdd" size="50" /></td>
+                </tr>
+                <tr>
+                    <td>Hình đại diện</td>
+                    <td><input type="file" id="idFile" name="nmFile" /></td>
+                </tr>
+                <tr>
+                    <td>Địa chỉ</td>
+                    <td><input type="text" id="idAddress" name="nmAddress" size="50" /></td>
+                </tr>
+                <tr>
+                    <td>Điện thoại</td>
+                    <td><input type="tel" id="idPhone" name="nmCellphone" size="50" /></td>
+                </tr>
+                <tr>
+                    <td>Câu hỏi bí mật</td>
+                    <td><select name="nmPrivateQuestion" id="idQuestion">
+                            <option value="">Chọn câu hỏi bí mật</option>
+                            <option value="firstschool">Ngôi trường đầu tiên của bạn là gì</option>
+                            <option value="firstpet">Con vật đầu tiên mà bạn nuôi tên gì</option>
+                            <option value="childhoodmemory">Kỉ niệm thời thơ ấu của bạn là gì</option>
+                            <option value="hometown">Quê bạn ở đâu</option>
+                            <option value="bestfriend">Tên người bạn thân nhất của bạn là gì?</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Trả lời</td>
+                    <td><input type="text" id="idAnswer" name="nmPrivateAnswer" size="50" /></td>
+                </tr>
+                <tr>
+                    <td>Bạn đang quan tâm đến nhóm sản phẩm nào?</td>
+                    <td>
+                        <table border="0" cellpadding="0" cellspacing="10" width="100%">
+                            <tr>
+                                <td>
+                                    <input type="checkbox" id="chk1" value="cellphone" /> Điện thoại<br />
+                                    <input type="checkbox" id="chk2" value="tablet" /> Tablet<br />
+                                    <input type="checkbox" id="chk3" value="computer" /> Vi tính
+
+                                </td>
+                                <td>
+                                    <input type="checkbox" id="chk4" value="camera" /> Máy ảnh - quay phim <br />
+                                    <input type="checkbox" id="chk5" value="electronics" /> Điện tử<br />
+                                    <input type="checkbox" id="chk6" value="home" /> Gia dụng
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center"><br /><input type="submit" name="nmSubmit" value="Đăng ký" />
+                        <input type="reset" name="nmReset" value="Xóa" />
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+<script src="./scripts/lab8_bai4.js"></script>
+
+</html>

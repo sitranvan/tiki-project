@@ -1,0 +1,30 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Untitled Document</title>
+	<script language="javascript">
+		s = "HTML & JAVASCRIPT";
+		var a = new Array();
+		for (i = 0; i < s.length; i++) {
+			if (s.charAt(i) != " ") {
+				var j = 0;
+				while (j < a.length) {
+					if (a[j] == s.charAt(i))
+						break;
+					j++;
+				}
+				if (j == a.length)
+					a.push(s.charAt(i));
+			}
+		}
+		alert("Số ký tự khác nhau là " + a.length + " : " + a.toString());
+	</script>
+</head>
+
+<body>
+</body>
+
+</html>

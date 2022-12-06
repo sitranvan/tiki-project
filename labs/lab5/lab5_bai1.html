@@ -1,0 +1,602 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Siêu thị điện máy</title>
+	<style type="text/css">
+		@charset "utf-8";
+
+		/* CSS Document */
+		body {
+			background-image: url(images/layout/bg.jpg);
+			background-position: top;
+			background-repeat: repeat-x;
+			margin: 0;
+
+		}
+
+		#container {
+			width: 1000px;
+			margin: 0 auto;
+			/* background-color:#F00; */
+		}
+
+		#header {
+			height: 173px;
+			background-image: url(images/layout/header_bg.jpg);
+		}
+
+		#banner {
+			height: 173px;
+			width: 600px;
+			float: right;
+			margin-right: 100px;
+
+		}
+
+		#menu {
+			height: 50px;
+
+		}
+
+		.menu_corner {
+			float: left;
+			width: 9px;
+		}
+
+		#menu_content {
+			width: 982px;
+			height: 50px;
+			background-image: url(images/layout/menu_bg.gif);
+			float: left;
+
+		}
+
+		#hmenu li {
+			float: left;
+			margin-left: 20px;
+			margin-right: 20px;
+			line-height: 50px;
+
+		}
+
+		#hmenu li a {
+			color: #000;
+			text-decoration: none;
+			line-height: 50px;
+			display: block;
+
+		}
+
+		#hmenu li a:hover {
+			color: #F00
+		}
+
+		.devider {
+			/*background-image:url(images/layout/menu_divider.gif);*/
+			background-color: #FF0;
+			width: 2px;
+		}
+
+		#path {
+			height: 15px;
+		}
+
+		#left {
+			width: 196px;
+			float: left;
+
+		}
+
+		#content {
+			width: 588px;
+			float: left;
+			margin-left: 10px;
+		}
+
+		#right {
+			width: 196px;
+			float: right;
+
+
+		}
+
+		#cart {
+			width: 195px;
+			height: 84px;
+			background-image: url(images/layout/cart_bg.gif);
+
+		}
+
+		#cart-title {
+			text-align: center;
+			font-size: 18px;
+			color: #847676;
+		}
+
+		#cart-detail {
+			font-size: 16px;
+			width: 135px;
+			float: left;
+			padding-left: 10px;
+		}
+
+		#cart-detail span {
+			color: #F00;
+		}
+
+		#cart-img {
+			width: 48px;
+			height: 48px;
+			float: left;
+			background-image: url(images/layout/shoppingcart.png)
+		}
+
+		#footer {
+			height: 60px;
+			color: #847676;
+			font-size: 12px;
+			text-align: center;
+			line-height: 20px;
+			font-style: italic;
+			background-image: url(images/layout/footer_bg.gif);
+
+		}
+
+		.categories {
+			list-style-type: none;
+			margin-top: 0px;
+			margin-left: -40px;
+		}
+
+		.categories li a {
+			text-decoration: none;
+			color: #504b4b;
+			line-height: 30px;
+			display: block;
+		}
+
+
+
+		.box_content {
+			text-align: center;
+			border: 1px solid #6da6b1;
+			padding: 2px;
+		}
+
+		.center_title {
+			line-height: 33px;
+			color: #847676;
+			font-weight: bold;
+			padding-left: 50px;
+			background: url(images/layout/bar_bg.gif) no-repeat center;
+		}
+
+		.center_content {
+			padding: 7px;
+		}
+
+		.product_box {
+			width: 173px;
+			height: auto;
+			float: left;
+			padding: 9px;
+		}
+
+		.pro_box_top {
+			height: 12px;
+			background-image: url(images/layout/product_box_top.gif);
+
+		}
+
+		.pro_box_bot {
+			height: 10px;
+			background-image: url(images/layout/product_box_bottom.gif);
+		}
+
+		.pro_box_mid {
+			background-image: url(images/layout/product_box_center.gif);
+		}
+
+		.pro_title {
+			text-align: center;
+			font-weight: bold;
+			color: #F00;
+			font-size: 14px;
+		}
+
+		.pro_title a {
+			text-decoration: none;
+			color: #F00;
+		}
+
+		.oldprice {
+			text-align: center;
+			color: #847676;
+			text-decoration: line-through;
+			width: 50%;
+			float: right;
+			font-size: 14px;
+		}
+
+		.pro_cart {
+			width: 50%;
+			float: right;
+			font-size: 14px;
+			text-align: center;
+		}
+
+		.pro_cart a {
+			text-decoration: none;
+			color: #504b4b
+		}
+
+		.pro_img {
+			text-align: center;
+			padding: 5px 0px;
+		}
+
+		.pro_img img {
+			height: 100px;
+		}
+
+		.big_box {
+			width: 554px;
+			margin-left: 17px;
+			margin-top: 15px;
+		}
+
+		.big_box_top {
+			background-image: url(images/layout/details_box_top.gif);
+			height: 12px;
+		}
+
+		.big_box_bot {
+			background-image: url(images/layout/details_box_bottom.gif);
+			height: 12px;
+		}
+
+		.big_box_mid {
+			background-image: url(images/layout/details_box_center.gif);
+		}
+
+		.big_box_img {
+			width: 170px;
+			float: left;
+			text-align: center;
+		}
+
+		.big_box_img img {
+			width: 94px;
+			height: 92px;
+		}
+
+		.big_box_detail {
+			width: 370px;
+			float: right;
+		}
+
+		.thumb img {
+			width: 30px;
+			height: 29px;
+			padding: 5px 0px;
+		}
+
+		.add_cart img {
+			width: 16px;
+			height: 16px;
+		}
+
+		.add_cart a {
+			text-decoration: none;
+			color: #006;
+		}
+
+		.pro_title_big {
+			color: #F00;
+			font-weight: bold;
+		}
+
+		.spec_value {
+			color: #5F9FAB;
+		}
+
+		.price {
+			color: #F00;
+			font-weight: bold;
+		}
+
+		.detail {
+			margin-top: 10px;
+			text-align: justify;
+		}
+
+		.detail img {
+			width: 100%;
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+
+		.detail span {
+			font-size: 18px;
+			line-height: 35px;
+			font-weight: bold;
+		}
+
+		#logo {
+			float: left;
+			padding-left: 15px;
+			padding-top: 10px;
+			width: 265px;
+		}
+
+		#hmenu {
+			list-style-type: none;
+			margin-left: -20px;
+			margin-top: 0px;
+		}
+
+		.clear {
+			clear: both
+		}
+
+		.lsp {
+			line-height: 30px;
+			background-image: url(images/layout/menu_title_bg.gif);
+			text-align: center;
+			color: #FFF;
+			font-weight: bold;
+		}
+
+		.categories li:nth-child(odd) {
+			background-color: #dad0d0;
+			padding-left: 5px;
+			margin-bottom: 1px;
+		}
+
+		.categories li:nth-child(even) {
+			background-color: #eee6e6;
+			padding-left: 5px;
+			margin-bottom: 1px;
+		}
+
+		.product-promotion {
+			line-height: 30px;
+			background-image: url(images/layout/menu_title_bg.gif);
+			text-align: center;
+			color: #FFF;
+			font-weight: bold;
+		}
+
+		.box_content {
+			height: 190px;
+		}
+
+		.pro-img {
+			text-align: center;
+			text-align: center;
+		}
+
+		.pro-price {
+			text-align: center;
+			color: #F00;
+			width: 50%;
+			float: left;
+			font-size: 14px;
+		}
+
+		.ads {
+			line-height: 30px;
+			background-image: url(images/layout/menu_title_bg.gif);
+			text-align: center;
+			color: #FFF;
+			font-weight: bold;
+		}
+
+		.hsx {
+			line-height: 30px;
+			background-image: url(images/layout/menu_title_bg.gif);
+			text-align: center;
+			color: #FFF;
+			font-weight: bold;
+		}
+
+		.clear-height {
+			clear: both;
+			height: 10px;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="container">
+		<div id="header">
+			<div id="logo"><a href="#"><img src="images/layout/logo.png" width="250" height="153" /></a></div>
+			<div id="banner">
+				<img src="images/layout/banner.png" />
+			</div>
+		</div>
+		<div id="menu">
+			<div class="menu_corner"><img src="images/layout/menu_left.gif" /></div>
+
+			<div id="menu_content">
+				<ul id="hmenu">
+					<li><a href="#"><img src="images/layout/home.png" /> Trang chủ</a></li>
+					<li class="devider">&nbsp;</li>
+					<li><a href="#"><img src="images/layout/services.png" /> Dịch vụ</a></li>
+					<li class="devider">&nbsp;</li>
+					<li><a href="#"><img src="images/layout/favs.png" /> Tin khuyến mãi</a></li>
+					<li class="devider">&nbsp;</li>
+					<li><a href="#"><img src="images/layout/car.png" /> Giao hàng</a></li>
+					<li class="devider">&nbsp;</li>
+					<li><a href="#"><img src="images/layout/user_add.png" /> Đăng nhập</a></li>
+				</ul>
+			</div>
+			<div class="menu_corner"><img src="images/layout/menu_right.gif" /></div>
+			<div class="clear"></div>
+		</div>
+		<div id="path"></div>
+		<div id="main">
+			<div id="left">
+				<div class="lsp">
+					Loại sản phẩm</div>
+				<ul class="categories">
+
+					<li><a href=""> <img src="images/layout/checked.png" /> &nbsp;&nbsp;Điện thoại</a></li>
+					<li><a href=""> <img src="images/layout/checked.png" /> &nbsp;&nbsp;Máy tính bảng</a></li>
+					<li><a href=""> <img src="images/layout/checked.png" /> &nbsp;&nbsp;Laptop</a></li>
+					<li><a href=""> <img src="images/layout/checked.png" /> &nbsp;&nbsp;Tivi</a></li>
+					<li><a href=""> <img src="images/layout/checked.png" /> &nbsp;&nbsp;Ampli</a></li>
+					<li><a href=""> <img src="images/layout/checked.png" /> &nbsp;&nbsp;Loa</a></li>
+				</ul>
+				<div>
+					<div class="product-promotion">
+						SP Khuyến mãi</div>
+					<div class="box_content">
+						<marquee direction="up" height="190">
+							<div class="pro_title">LENOVO Yoga 500 </div>
+							<div class="pro-img"><img src="images/pro_img/laptops/Yoga 500 14HIW3.png" height="120" />
+							</div>
+							<div class="oldprice">13.990.000</div>
+							<div class="pro_price">11.169.000</div>
+							<div class="clear"></div>
+							<hr color="#6da6b1" />
+							<div class="pro_title">BOSTON AUDIO PA-1400 </div>
+							<div class="pro-img"><img src="images/pro_img/amplies/BOSTON AUDIO PA-14001.png"
+									height="120" /></div>
+							<div class="oldprice">8.790.000</div>
+							<div class="pro_price">6.690.000</div>
+							<div class="clear"></div>
+						</marquee>
+					</div>
+				</div>
+			</div>
+			<div id="content">
+				<div class="center_title">Sản phẩm mới</div>
+				<div class="center_content">
+					<div class="product_box">
+						<div class="pro_box_top"></div>
+						<div class="pro_box_mid">
+							<div class="pro_title">Galaxy S6 Edge</div>
+							<div class="pro_img"><a href="#"><img src="images/pro_img/phones/S6Edge1.png" /></a></div>
+							<div class="pro-price">
+								19.900.000</div>
+							<div class="pro_cart"><a href="#"><img src="images/layout/cart.gif" width="9" height="9" />
+									Đặt mua</a></div>
+							<div class="clear"></div>
+						</div>
+						<div class="pro_box_bot"></div>
+					</div>
+					<div class="product_box">
+						<div class="pro_box_top"></div>
+						<div class="pro_box_mid">
+							<div class="pro_title"><a href="#">Asus Memopad</a></div>
+							<div class="pro_img"><a href="#"><img src="images/pro_img/tablets/ME181CX1.png" /></a></div>
+							<div class="pro-price">
+								3.990.000</div>
+							<div class="pro_cart"><a href="#"><img src="images/layout/cart.gif" width="9" height="9" />
+									Đặt mua</a></div>
+							<div class="clear"></div>
+						</div>
+						<div class="pro_box_bot"></div>
+					</div>
+
+					<div class="product_box">
+						<div class="pro_box_top"></div>
+						<div class="pro_box_mid">
+							<div class="pro_title"><a href="#">Tivi LED SONY 40"</a></div>
+							<div class="pro_img"><a href="#"><img src="images/pro_img/tivis/KDL-40R350C VN31.png" /></a>
+							</div>
+							<div class="pro-price">9.990.000
+							</div>
+							<div class="pro_cart"><a href="#"><img src="images/layout/cart.gif" width="9" height="9" />
+									Đặt mua</a></div>
+							<div class="clear"></div>
+						</div>
+						<div class="pro_box_bot"></div>
+					</div>
+				</div>
+
+				<div class="clear"></div>
+
+				<div class="center_title">Sản phẩm bán chạy</div>
+				<div class="center_content">
+					<div class="product_box">
+						<div class="pro_box_top"></div>
+						<div class="pro_box_mid">
+							<div class="pro_title"><a href="#">BOSE 301V</a></div>
+							<div class="pro_img"><a href="#"><img src="images/pro_img/speakers/Bose 301V1.png" /></a>
+							</div>
+							<div class="pro-price">
+								9.070.000</div>
+							<div class="pro_cart"><a href="#"><img src="images/layout/cart.gif" width="9" height="9" />
+									Đặt mua</a></div>
+							<div class="clear"></div>
+						</div>
+						<div class="pro_box_bot"></div>
+					</div>
+					<div class="product_box">
+						<div class="pro_box_top"></div>
+						<div class="pro_box_mid">
+							<div class="pro_title"><a href="#">Aspire E5-571G-59BZ</a></div>
+							<div class="pro_img"><a href="#"><img
+										src="images/pro_img/laptops/ACER Aspire E5-571G-59BZ1.png" /></a></div>
+							<div class="pro-price">
+								11.390.000</div>
+							<div class="pro_cart"><a href="#"><img src="images/layout/cart.gif" width="9" height="9" />
+									Đặt mua</a></div>
+							<div class="clear"></div>
+						</div>
+						<div class="pro_box_bot"></div>
+					</div>
+
+					<div class="product_box">
+						<div class="pro_box_top"></div>
+						<div class="pro_box_mid">
+							<div class="pro_title"><a href="#">IPHONE 6 PLUS</a></div>
+							<div class="pro_img"><a href="#"><img src="images/pro_img/phones/6Splus1.png" /></a></div>
+							<div class="pro-price">
+								19.499.000</div>
+							<div class="pro_cart"><a href="#"><img src="images/layout/cart.gif" width="9" height="9" />
+									Đặt mua</a></div>
+							<div class="clear"></div>
+						</div>
+						<div class="pro_box_bot"></div>
+					</div>
+				</div>
+
+			</div>
+			<div id="right">
+				<div class="hsx">
+					Hãng sản xuất</div>
+				<ul class="categories">
+
+					<li><a href=""> <img src="images/layout/checked.png" /> &nbsp;&nbsp;Apple</a></li>
+					<li><a href=""> <img src="images/layout/checked.png" /> &nbsp;&nbsp;Nokia</a></li>
+					<li><a href=""> <img src="images/layout/checked.png" /> &nbsp;&nbsp;Samsung</a></li>
+					<li><a href=""> <img src="images/layout/checked.png" /> &nbsp;&nbsp;LG</a></li>
+					<li><a href=""> <img src="images/layout/checked.png" /> &nbsp;&nbsp;Sharp</a></li>
+					<li><a href=""> <img src="images/layout/checked.png" /> &nbsp;&nbsp;Toshiba</a></li>
+				</ul>
+				<div>
+					<div class="ads">
+						Quảng cáo</div>
+					<div class="box_content">
+						<img src="images/news/km.jpg" width="190" />
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<div class="clear-height"></div>
+		<div id="footer">
+			Copyright&copy; Siêu thị điện máy H-T<br />
+			Địa chỉ: 180 Cao Lỗ Phường 4 Quận 8 Tp.HCM<br />
+			Điện thoại: 0909123456
+		</div>
+	</div>
+</body>
+
+</html>

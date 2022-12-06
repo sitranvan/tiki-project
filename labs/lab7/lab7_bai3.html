@@ -1,0 +1,23 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Lab7 - Thuc hành 3</title>
+	<script language="javascript">
+		function doimau() {
+			var r = Math.floor(Math.random() * 255);
+			var g = Math.floor(Math.random() * 255);
+			var b = Math.floor(Math.random() * 255);
+			document.bgColor = ('#' + r.toString(16) + g.toString(16) + b.toString(16)).toUpperCase();
+			setTimeout('doimau()', 1000);
+		}
+	</script>
+</head>
+
+<body onload="doimau();">
+
+</body>
+
+</html>

@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url(https://www.itl.cat/pngfile/big/145-1452213_comet-minimal-minimal-wallpaper-comet.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-x: hidden;
+}
+
+html {
+  font-size: 62.5%;
+  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+  color: white;
+}
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.intro {
+  width: 1270px;
+  padding: 35px;
+  max-width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.intro > h1 {
+  text-align: center;
+  margin: 50px 0;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 4rem;
+  text-shadow: 3px 3px 20px #952767, -2px 1px 30px #952767;
+  letter-spacing: 2px;
+}
+
+.intro-wrap {
+  display: flex;
+  gap: 0 50px;
+  align-items: flex-start;
+}
+.intro-left {
+  width: 50%;
+}
+
+.intro-left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.intro-right {
+  width: 50%;
+}
+
+.purpose-title,
+.feature-title,
+.technology-title {
+  font-size: 3rem;
+  text-shadow: 3px 3px 20px #952767, -2px 1px 30px #952767;
+}
+.feature-title,
+.purpose-title {
+  margin: 30px 0;
+}
+.purpose-list,
+.feature-list,
+.technology-list {
+  list-style-type: none;
+}
+
+.purpose-list > li,
+.feature-list > li,
+.technology-list > li {
+  margin-top: 15px;
+  font-size: 1.6rem;
+  color: white;
+  font-weight: 500;
+}
+
+@keyframes scaleOpa {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes transform {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.technology-title,
+.technology-list > li {
+  animation: transform 0.5s ease-in-out forwards;
+}
+.purpose-title,
+.purpose-list > li {
+  animation: transform 1s ease-in-out forwards;
+}
+.feature-title,
+.feature-list > li {
+  animation: transform 1.5s ease-in-out forwards;
+}
+
+.intro > h1 {
+  animation: scaleOpa 1s ease-in-out forwards;
+}
+
+.intro-left img {
+  animation: scaleOpa 1s ease-in-out forwards;
+}
+
+@media screen and (max-width: 1023px) {
+  .intro > h1 {
+    font-size: 3rem;
+  }
+  .intro-wrap {
+    flex-direction: column-reverse;
+  }
+  .intro-left,
+  .intro-right {
+    width: 100%;
+  }
+
+  .purpose-title,
+  .feature-title,
+  .technology-title {
+    font-size: 2.5rem;
+  }
+}

@@ -1,0 +1,58 @@
+// PC
+@mixin device-pc {
+    @media (min-width:1024px) {
+        @content;
+    }
+}
+
+// Mobile and Tablet
+@mixin device-mobile-tablet {
+    @media (max-width: 1023px) {
+        @content;
+    }
+}
+
+// Tablet
+@mixin devive-tablet {
+    @media (min-width: 740px) and (max-width:1023px) {
+        @content;
+    }
+}
+
+// Mobile
+@mixin device-mobile {
+    @media (max-width:739px) {
+        @content;
+    }
+}
+
+@keyframes showOn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes flash {
+    50% {
+        opacity: 0.3;
+        transform: scale(1.3);
+    }
+}
+
+@keyframes textFlash {
+    0% {
+        color: red;
+    }
+
+    50% {
+        color: violet;
+    }
+
+    100% {
+        color: blue;
+    }
+}

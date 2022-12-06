@@ -1,0 +1,67 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>lab8 - bài 5</title>
+  <script type="text/javascript">
+    var a = 0, b = 0, c = 0;
+    function sinhso() {
+      a = Math.round(Math.random() * 100);
+      b = Math.round(Math.random() * 100);
+      document.frm.txt1.value = a;
+      document.frm.txt2.value = b;
+      document.frm.txtKQ.value = '';
+      document.getElementById('lbl').innerText = '';
+      c = a + b;
+    }
+    function kiemtra() {
+      if (document.frm.txtKQ.value == c) {
+        document.getElementById('lbl').innerHTML = '<font color="#009900">Đúng</font>';
+      } else {
+        document.getElementById('lbl').innerHTML = '<font color="#FF0000">Sai</font>';
+      }
+
+    }
+  </script>
+</head>
+
+<body>
+  <form id="frm" name="frm" method="post" action="">
+    <label> </label>
+    <table width="270" border="0" cellspacing="3">
+      <tr>
+        <td width="95">Số 1:</td>
+        <td width="165"><input type="text" name="txt1" id="txt1" disabled="disabled" /></td>
+      </tr>
+      <tr>
+        <td width="95">&nbsp;</td>
+        <td align="center">
+          <font size="+2"><b> +</b></font>
+        </td>
+      </tr>
+      <tr>
+        <td width="95">Số 2:</td>
+        <td><input type="text" name="txt2" id="txt2" disabled="disabled" /></td>
+      </tr>
+      <tr>
+        <td width="95">Số 1 + Số 2 =</td>
+        <td><input type="text" name="txtKQ" id="txtKQ" /></td>
+      </tr>
+
+      <tr>
+        <td colspan="2" align="center">
+          <input type="button" name="btnSinh" id="btnSinh" value="Bài mới" onclick="sinhso();" />&nbsp;&nbsp;&nbsp;
+          <input type="button" name="btn2" id="btn" value="Kiểm tra KQ" onclick="kiemtra();" />
+        </td>
+      </tr>
+      <tr>
+        <td width="95">Kết quả: </td>
+        <td align="center"><label id="lbl" style="text-align:left">&nbsp;</label></td>
+      </tr>
+    </table>
+  </form>
+</body>
+
+</html>
