@@ -5,12 +5,15 @@
     left: 0;
     bottom: var(--height-navigation);
     background-color: var(--white-color);
-    z-index: 99999999999;
+    z-index: 99999999999999;
     transform: translateX(-100%);
     transition: all linear 0.25s;
     overflow-y: auto;
     padding-bottom: 20px;
 
+    &--page {
+        bottom: 0;
+    }
 
     &::-webkit-scrollbar {
         display: none;
@@ -28,6 +31,7 @@
         align-items: center;
         padding: 8px 16px;
         background-color: var(--primary-color);
+
 
         &__avatar {
             width: 40px;

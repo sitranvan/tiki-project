@@ -84,6 +84,9 @@ const formInputMobileTablet = formMobileTablet.querySelector("input")
 const cartMTSearch = document.querySelector(".header-hide-on__cart")
 const menuMobileTablet = document.querySelector(".menu-mobile-tablet")
 var styleBeforeAffter = document.head.appendChild(document.createElement("style"));
+
+
+
 window.addEventListener('DOMContentLoaded', (event) => {
     showSearchMobileTablet()
     showHistoryPc()
@@ -109,8 +112,6 @@ function showSearchMobileTablet() {
         hederMobileTablet.style.display = "flex"
         document.body.style.overflow = "auto"
         container.style.display = "block"
-
-
     })
 
 }
@@ -133,6 +134,14 @@ function showHistoryPc() {
     })
 
 }
+function showHistoryMobile() {
+    headerHideOnInput.addEventListener('focus', (e) => {
+        historyMobileTablet.classList.add('show-on')
+        document.body.style.overflow = 'hidden'
+    })
+}
+showHistoryMobile()
+
 //*  Show more list hisotory
 function showMoreListHistory(history, showMore) {
     history.addEventListener("click", (e) => {
@@ -320,6 +329,11 @@ overlayFull.addEventListener("click", (e) => {
     menuMobileTablet.classList.remove("show-on")
     overlayFull.classList.remove("show-on")
 })
+
+
+const overlayMenu = document.querySelector("overlay-menu")
+
+
 
 
 //* Form login 

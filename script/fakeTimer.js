@@ -33,6 +33,6 @@ function countdownTimeStart() {
 }
 countdownTimeStart()
 
-alert("❤❤❤  Thông tin đề tài ở cuối trang  ✔✔✔✔")
+// alert("❤❤❤  Thông tin đề tài ở cuối trang  ✔✔✔✔")
 console.log("Bản quyền thuộc về tiki.vn...")
 console.log("Clone web Trần Văn Sĩ")

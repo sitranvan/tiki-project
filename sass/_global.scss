@@ -1,9 +1,6 @@
 body {
-
     background-color: #F5F5FA;
     position: relative;
-
-
 }
 
 .wrapper {
@@ -20,7 +17,7 @@ body {
     left: 0;
     bottom: 0;
     background-color: rgba(black, 0.4);
-    z-index: 999999999;
+    z-index: 99999;
     opacity: 0;
     visibility: hidden;
     transition: all linear 0.2s;
@@ -66,11 +63,11 @@ body {
     }
 }
 
-.info-project {
+.projects {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0 20px;
+    gap: 20px;
     padding: 20px 0;
 
     & span {
@@ -84,5 +81,24 @@ body {
         font-weight: 700;
         color: #242424;
         animation: textFlash 0.5s infinite linear forwards;
+    }
+}
+
+.overlay-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(black, 0.4);
+    z-index: 99999;
+    // opacity: 0;
+    // visibility: hidden;
+    transition: all linear 0.2s;
+
+    &.show-on {
+        opacity: 1;
+        visibility: visible;
+
     }
 }
