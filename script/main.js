@@ -77,12 +77,15 @@ const discountContent = document.querySelector(".discount-content")
 const video = document.querySelector("#video")
 const overlayFull = document.querySelector(".overlay-full")
 const menuBars = document.querySelector(".header-hide-on__bars")
+const overlayMobile = document.querySelector(".overlay-menu__mobile")
+const menuMobileWrapper = document.querySelector(".menu-mobile__wrapper")
+const menuMobileTablet = document.querySelector(".menu-mobile-tablet")
 const switchHideShow = document.querySelector(".form-email__password span")
 const formInputPassword = document.querySelector(".form-email__password input")
 const formTitleEmailMobileTablet = formMobileTablet.querySelector("h5")
 const formInputMobileTablet = formMobileTablet.querySelector("input")
 const cartMTSearch = document.querySelector(".header-hide-on__cart")
-const menuMobileTablet = document.querySelector(".menu-mobile-tablet")
+
 var styleBeforeAffter = document.head.appendChild(document.createElement("style"));
 
 
@@ -319,21 +322,21 @@ video.addEventListener("ended", (e) => {
 
 })
 
+
+
 //* Menu mobile tablet
 menuBars.addEventListener("click", (e) => {
+    console.log(menuMobileTablet)
     menuMobileTablet.classList.add("show-on")
-    overlayFull.classList.add("show-on")
+    overlayMobile.classList.add('show-on')
+    menuMobileWrapper.classList.add("show-on")
 })
 //* Click overlay close
-overlayFull.addEventListener("click", (e) => {
+overlayMobile.addEventListener("click", (e) => {
     menuMobileTablet.classList.remove("show-on")
-    overlayFull.classList.remove("show-on")
+    overlayMobile.classList.remove('show-on')
+    menuMobileWrapper.classList.remove("show-on")
 })
-
-
-const overlayMenu = document.querySelector("overlay-menu")
-
-
 
 
 //* Form login 
@@ -369,6 +372,7 @@ overlayFull.addEventListener("click", (e) => {
     formLogin.classList.remove("show-on")
     formEmail.classList.remove("show-on")
     formRegister.classList.remove("show-on")
+    overlayFull.classList.remove("show-on")
 })
 
 //* MENU CATEGORY
@@ -410,7 +414,6 @@ menuAccountItem.addEventListener("click", function (e) {
             formInputMobileTablet.placeholder = "Số điện thoại"
             switchEmailMobileTablet.textContent = "Đăng nhập bằng email"
             formInputMobileTablet.value = ""
-
         }
     })
 })

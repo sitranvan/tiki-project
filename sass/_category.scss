@@ -36,7 +36,12 @@
         & i {
             font-size: 1.6rem;
             color: #272728;
+            cursor: pointer;
         }
+    }
+
+    &__next {
+        padding-left: 8px;
     }
 
     &__next {

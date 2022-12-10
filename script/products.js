@@ -4704,20 +4704,20 @@ function renderViewProduct(listProducts, limit = DEFAULT_LIMIT) {
             const detailHeaderMT = document.querySelector(".detail-mt__head")
             const iconArrowDetailMT = document.querySelector('.detail-mt__left')
             const iconCartDetailMT = document.querySelector('.detail-mt__right__icon--cart')
-            const iconMoretDetailMT = document.querySelector('.detail-mt__right__icon--more')
+            const iconMoreDetailMT = document.querySelector('.detail-mt__right__icon--more')
 
             const setColorDetaiIcon = (back, cart, more, bg) => {
                 iconArrowDetailMT.querySelector('img').src = back
                 iconCartDetailMT.querySelector('img').src = cart
-                iconMoretDetailMT.querySelector('img').src = more
+                iconMoreDetailMT.querySelector('img').src = more
                 if (bg == false) {
                     iconArrowDetailMT.style.backgroundColor = 'transparent'
                     iconCartDetailMT.style.backgroundColor = 'transparent'
-                    iconMoretDetailMT.style.backgroundColor = 'transparent'
+                    iconMoreDetailMT.style.backgroundColor = 'transparent'
                 } else {
                     iconArrowDetailMT.style.backgroundColor = '#24242480'
                     iconCartDetailMT.style.backgroundColor = '#24242480'
-                    iconMoretDetailMT.style.backgroundColor = '#24242480'
+                    iconMoreDetailMT.style.backgroundColor = '#24242480'
                 }
             }
 

@@ -25,6 +25,11 @@ html {
 
         & a {
             color: #808089;
+            font-weight: 300;
+
+            &:hover {
+                text-decoration: underline;
+            }
         }
 
         & img {
@@ -199,7 +204,7 @@ html {
 
         & a {
             font-weight: 400;
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             color: var(--text-38);
             padding: 0px 0px 12px;
             line-height: 16px;
@@ -478,4 +483,16 @@ html {
 
 
     }
+}
+
+.list-category-mobile-tablet--page {
+    top: 0;
+}
+
+.list-category-mobile-tablet--page__close {
+    width: 60px;
+}
+
+.nav-content a:hover {
+    text-decoration: underline;
 }
