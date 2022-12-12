@@ -715,3 +715,5 @@ document.querySelector(".detail-content__submit").addEventListener("click", (e) 
     formLogin.classList.add("show-on")
     overlayFull.classList.add("show-on")
 })
+
+// document.querySelector("header-logo").href = "index.html"

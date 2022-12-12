@@ -218,7 +218,16 @@
     &-category {
 
         &__link {
-            font-size: 1.1rem;
+            font-size: 1.2rem;
+            color: var(--white-color);
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+
+        & span {
+            font-size: 1.2rem;
             color: var(--white-color);
         }
     }

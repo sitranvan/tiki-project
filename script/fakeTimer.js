@@ -33,6 +33,7 @@ function countdownTimeStart() {
 }
 countdownTimeStart()
 
-// alert("❤❤❤  Thông tin đề tài ở cuối trang  ✔✔✔✔")
 console.log("Bản quyền thuộc về tiki.vn...")
-console.log("Clone web Trần Văn Sĩ")
+console.log("GVHD: Nguyễn Trọng Nghĩa")
+console.log("SV Thực hiện: Trần Văn Sĩ")
+

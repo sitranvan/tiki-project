@@ -4538,6 +4538,21 @@ window.onload = function (e) {
 }
 
 
+
+logo.addEventListener("click", () => {
+    main.classList.remove("hidden")
+    document.title = 'Tiki - Mua hàng online giá rẻ'
+    details.classList.remove("show")
+
+})
+
+backDetails.addEventListener("click", () => {
+    main.classList.remove("hidden")
+    document.title = 'Tiki - Mua hàng online giá rẻ'
+    details.classList.remove("show")
+    document.querySelector(".info-desc p").classList.remove("more")
+    document.querySelector(".info-desc__show").textContent = "Xem thêm nội dung"
+})
 function renderDetail(img, name, sold, priceProduct, discount) {
     document.title = name
     document.querySelector(".detail-left__img img").src = img
@@ -4553,19 +4568,6 @@ function renderDetail(img, name, sold, priceProduct, discount) {
     document.querySelectorAll(".similar-content__sold").forEach(item => item.textContent = sold)
     // document.querySelector(".exzoom_preview_img").src = img
 }
-
-logo.addEventListener("click", () => {
-    main.classList.remove("hidden")
-    document.title = 'Tiki - Mua hàng online giá rẻ'
-    details.classList.remove("show")
-
-})
-
-backDetails.addEventListener("click", () => {
-    main.classList.remove("hidden")
-    document.title = 'Tiki - Mua hàng online giá rẻ'
-    details.classList.remove("show")
-})
 
 function renderViewProduct(listProducts, limit = DEFAULT_LIMIT) {
     const htmls = listProducts.slice(0, limit).map(item => {
@@ -4651,10 +4653,12 @@ function renderViewProduct(listProducts, limit = DEFAULT_LIMIT) {
             const sold = item.querySelector(".product-item__amount").textContent
             const priceProduct = item.querySelector(".product-item__price").textContent
             const discount = item.querySelector(".product-item__discount").textContent
+            document.querySelector(".details-cate__item--name").textContent = name
             main.classList.add("hidden")
             details.classList.add("show")
             renderDetail(img, name, sold, priceProduct, discount)
 
+            document.querySelector(".detail-content__quanlity input").value = 1
 
             // similar scroll slider
             const similarWidth = similarList.clientWidth
@@ -4684,9 +4688,9 @@ function renderViewProduct(listProducts, limit = DEFAULT_LIMIT) {
             })
 
             // show and hidden decs
+
             const descDetail = document.querySelector(".info-desc p")
             const descDetailBtn = document.querySelector(".info-desc__show")
-
             descDetailBtn.addEventListener('click', () => {
 
                 if (descDetailBtn.textContent === "Thu gọn") {
@@ -4755,10 +4759,148 @@ function renderViewProduct(listProducts, limit = DEFAULT_LIMIT) {
                 details.classList.remove("show")
                 document.querySelector('.header').style.display = 'block'
                 document.body.scrollIntoView({ block: "start" });
+                descDetailBtn.textContent = "Xem thêm nội dung"
+                descDetail.classList.remove("more")
             })
         })
     })
 }
+const discountItems = document.querySelectorAll(".discount-item")
+
+
+function renderDetailDiscount(img, priceProduct, discount) {
+    document.querySelector(".detail-left__img img").src = img
+    document.querySelector(".detail-content__price h2").textContent = priceProduct
+    document.querySelector(".detail-content__price p").textContent = discount
+    document.querySelector(".detail-content__compare__price").textContent = priceProduct
+}
+
+Array.from(discountItems).forEach(item => {
+    item.addEventListener('click', (e) => {
+        const img = document.querySelector(".discount-item__img").src
+        const price = document.querySelector(".discount-item__price h5").textContent
+        const discount = document.querySelector(".discount-item__price span").textContent
+        document.querySelector(".detail-content__name").textContent = 'Sản phẩm đang khuyến mãi'
+
+        document.querySelectorAll(".similar-img__product").forEach(item => item.src = img)
+        document.querySelectorAll(".similar-content__price p:first-child").forEach(item => item.textContent = price)
+        document.querySelectorAll(".similar-content__price p:last-child").forEach(item => item.textContent = discount)
+        document.querySelectorAll(".similar-content__name h3").forEach(item => item.textContent = 'Sản phẩm đang khuyến mãi')
+        document.querySelector(".details-cate__item--name").textContent = 'Sản phẩm đang khuyến mãi sale cực khủng mua ngay kẻo lỡ!'
+
+        main.classList.add("hidden")
+        details.classList.add("show")
+        renderDetailDiscount(img, price, discount)
+
+        document.querySelector(".detail-content__quanlity input").value = 1
+        const similarList = document.querySelector(".similar-list")
+        const similarNext = document.querySelector(".similar-next")
+        const similarPrev = document.querySelector(".similar-prev")
+        // similar scroll slider
+        const similarWidth = similarList.clientWidth
+
+        let checkScrollSimilar = 0
+        similarNext.addEventListener('click', () => {
+            checkScrollSimilar++
+            if (checkScrollSimilar >= 1) {
+                similarNext.style.opacity = 0
+                similarNext.style.pointerEvents = 'none'
+                similarPrev.style.opacity = 1
+                similarPrev.style.pointerEvents = 'unset'
+            }
+            similarList.scrollLeft += similarWidth
+        })
+
+        similarPrev.addEventListener('click', () => {
+            checkScrollSimilar--
+            if (checkScrollSimilar === 0) {
+                similarNext.style.opacity = 1
+                similarNext.style.pointerEvents = 'unset'
+                similarPrev.style.opacity = 0
+                similarPrev.style.pointerEvents = 'none'
+            }
+            similarList.scrollLeft -= similarWidth
+
+        })
+
+        // show and hidden decs
+
+        const descDetail = document.querySelector(".info-desc p")
+        const descDetailBtn = document.querySelector(".info-desc__show")
+
+        descDetailBtn.addEventListener('click', () => {
+
+            if (descDetailBtn.textContent === "Thu gọn") {
+                descDetail.classList.remove("more")
+                descDetailBtn.textContent = "Xem thêm nội dung"
+
+            } else {
+                descDetail.classList.add("more")
+                descDetailBtn.textContent = "Thu gọn"
+            }
+        })
+
+        // check media query mobile and tablet
+        const mediaQuery = window.matchMedia('(max-width: 1023px)')
+        const detailHeaderMT = document.querySelector(".detail-mt__head")
+        const iconArrowDetailMT = document.querySelector('.detail-mt__left')
+        const iconCartDetailMT = document.querySelector('.detail-mt__right__icon--cart')
+        const iconMoreDetailMT = document.querySelector('.detail-mt__right__icon--more')
+
+        const setColorDetaiIcon = (back, cart, more, bg) => {
+            iconArrowDetailMT.querySelector('img').src = back
+            iconCartDetailMT.querySelector('img').src = cart
+            iconMoreDetailMT.querySelector('img').src = more
+            if (bg == false) {
+                iconArrowDetailMT.style.backgroundColor = 'transparent'
+                iconCartDetailMT.style.backgroundColor = 'transparent'
+                iconMoreDetailMT.style.backgroundColor = 'transparent'
+            } else {
+                iconArrowDetailMT.style.backgroundColor = '#24242480'
+                iconCartDetailMT.style.backgroundColor = '#24242480'
+                iconMoreDetailMT.style.backgroundColor = '#24242480'
+            }
+        }
+
+
+        // Check if the media query is true
+        if (mediaQuery.matches) {
+            // Then trigger hidden header
+            document.querySelector('.header').style.display = 'none'
+
+            window.addEventListener('scroll', (e) => {
+                const scroll = window.scrollY || document.documentElement.scrollTop
+                if (scroll > 0) {
+                    detailHeaderMT.style.backgroundColor = "#fff"
+                    setColorDetaiIcon(
+                        './icon-svg/detail-back-blue.svg',
+                        './icon-svg/detail-cart-blue.svg',
+                        './icon-svg/detail-more-blue.svg', false
+                    )
+                } else {
+                    detailHeaderMT.style.backgroundColor = "transparent"
+                    setColorDetaiIcon(
+                        './icon-svg/detail-back-white.svg',
+                        './icon-svg/detail-cart-white.svg',
+                        './icon-svg/detail-more-white.svg', true
+                    )
+                }
+
+            })
+        }
+
+        const backMTDetail = document.querySelector(".detail-mt__left")
+        backMTDetail.addEventListener('click', () => {
+            main.classList.remove("hidden")
+            document.title = 'Tiki - Mua hàng online giá rẻ'
+            details.classList.remove("show")
+            document.querySelector('.header').style.display = 'block'
+            document.body.scrollIntoView({ block: "start" });
+            descDetailBtn.textContent = "Xem thêm nội dung"
+            descDetail.classList.remove("more")
+        })
+    })
+})
 
 
 //* Click suggest show product

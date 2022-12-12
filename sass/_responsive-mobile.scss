@@ -74,4 +74,60 @@
             color: var(--primary-text);
         }
     }
+
+    .promotion-product {
+        padding-bottom: unset !important;
+    }
+
+    .promotion-wrapper .wrapper {
+        padding: 0;
+    }
+
+    .promotion-product {
+        border: unset;
+    }
+
+    .promotion-coupon__list {
+        overflow-x: auto;
+        scrollbar-width: none;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+
+    }
+
+    .promotion-content__head {
+        max-width: unset;
+    }
+
+    .promotion-product {
+        border-radius: unset;
+    }
+
+    .promotion-product__link {
+        margin: 16px 4px;
+        width: 50%;
+        border-radius: 4px;
+
+        &__price {
+            & span {
+                font-size: 1.3rem !important;
+                white-space: nowrap;
+            }
+        }
+    }
+
+    .promotion-product__list {
+        scrollbar-width: none;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    .promotion-banner {
+        padding-top: 56px;
+    }
 }
