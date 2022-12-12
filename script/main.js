@@ -716,4 +716,17 @@ document.querySelector(".detail-content__submit").addEventListener("click", (e) 
     overlayFull.classList.add("show-on")
 })
 
-// document.querySelector("header-logo").href = "index.html"
+
+function backToHome() {
+    const headerLogo = document.querySelector(".header-logo")
+    const link = document.createElement("a")
+    link.href = "index.html"
+    const img = document.createElement('img')
+    img.src = "./image/logo/tiki-logo.png"
+    img.className = "header-logo"
+    img.alt = "logo"
+    headerLogo.parentNode.replaceChild(link, headerLogo)
+    link.appendChild(img)
+}
+
+backToHome()

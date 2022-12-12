@@ -213,3 +213,75 @@ closeCatePage.addEventListener('click', (e) => {
 menuHomeItem.addEventListener("click", (e) => {
     removeMenu()
 })
+
+
+function backToHome() {
+    const headerLogo = document.querySelector(".header-logo")
+    const link = document.createElement("a")
+    link.href = "../index.html"
+    const img = document.createElement('img')
+    img.src = "../image/logo/tiki-logo.png"
+    img.className = "header-logo"
+    img.alt = "logo"
+    headerLogo.parentNode.replaceChild(link, headerLogo)
+    link.appendChild(img)
+}
+backToHome()
+const navHomeLink = document.querySelector(".nav-content > a")
+const pageFilterListOne = document.querySelectorAll(".page-filter")[0]
+const pageFilterItems = pageFilterListOne.querySelectorAll(".page-filter__item a")
+
+Array.from(pageFilterItems).forEach(item => {
+    switch (navHomeLink.innerText) {
+        case "Bách Hóa Online":
+            item.href = "convenient-store.html"
+            break
+        case "Nhà Cửa Đời Sống":
+            item.href = "house.html"
+            break;
+        case "Điện Tử - Điện Lạnh":
+            item.href = "electronic.html"
+            break
+        case "Thiết Bị Số - Phụ Kiện":
+            item.href = "digital-device.html"
+            break
+        case "Điện Thoại - Máy Tính Bảng":
+            item.href = "phone.html"
+            break
+        case "Laptop - Vi Tính - Phụ Kiện":
+            item.href = "laptop.html"
+            break
+        case "Làm Đẹp - Sức Khỏe":
+            item.href = "beautify.html"
+            break
+        case "Điện Gia Dụng":
+            item.href = "appliances.html"
+            break
+        case "Thời trang nam":
+            item.href = "men-fashion.html"
+            break
+        case "Thời trang nữ":
+            item.href = "women-fashion.html"
+            break;
+        case "Giày - Dép nữ":
+            item.href = "women-shoes.html"
+            break
+        case "Giày - Dép nam":
+            item.href = "men-shoes.html"
+            break
+        case "Balo và Vali":
+            item.href = "balo-vali.html"
+            break
+        case "Đồng hồ và Trang sức":
+            item.href = "watch.html"
+            break;
+        case "Ô tô - Xe máy - Xe đạp":
+            item.href = "vehicle.html"
+            break;
+        case "Nhà sách Tiki":
+            item.href = "books.html"
+            break;
+        default:
+            break
+    }
+})
