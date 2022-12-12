@@ -11,14 +11,12 @@
         @content;
     }
 }
-
 // Tablet
 @mixin devive-tablet {
     @media (min-width: 740px) and (max-width:1023px) {
         @content;
     }
 }
-
 // Mobile
 @mixin device-mobile {
     @media (max-width:739px) {

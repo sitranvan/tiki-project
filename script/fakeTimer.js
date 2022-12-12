@@ -4,20 +4,14 @@ const hours = timer[0]
 const minutes = timer[1]
 const seconds = timer[2]
 
-
 function countdownTimeStart() {
-
     const countDownDate = new Date().getTime() + THREE_HOURS
-
-
     const setTimer = setInterval(function () {
         const now = new Date().getTime();
         const timeRemaining = countDownDate - now;
-
         const hoursText = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         const minutesText = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
         const secondsText = Math.floor((timeRemaining % (1000 * 60)) / 1000);
-
         hours.textContent = `0${hoursText}`.slice(-2)
         minutes.textContent = `0${minutesText}`.slice(-2)
         seconds.textContent = `0${secondsText}`.slice(-2)

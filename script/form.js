@@ -29,7 +29,6 @@ function checkFormEmpty(input) {
             input.parentElement.classList.add("active")
         } else {
             input.parentElement.classList.remove("active")
-
         }
     })
 }
@@ -47,7 +46,7 @@ checkFormEmpty(inputPasswordLogin)
 checkFormEmpty(inputFormMT)
 checkFormEmpty(inputPhoneRegister)
 
-function validateForm(input, regexFirst, regexSecond) {
+function validateForm(input, regexFirst) {
     input.addEventListener("input", function (e) {
         const value = e.target.value
         const regex = /^\d{10}$/

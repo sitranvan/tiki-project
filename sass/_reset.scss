@@ -6,12 +6,7 @@ html {
     line-height: 1.4;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1,h2,h3,h4,h5,h6 {
     font-weight: 400;
 }
 
@@ -26,10 +21,7 @@ h6 {
     box-sizing: border-box;
 }
 
-input,
-textarea,
-select,
-button {
+input,textarea,select,button {
     outline: none;
 }
 
@@ -37,8 +29,7 @@ input {
     line-height: normal;
 }
 
-label,
-button {
+label,button {
     cursor: pointer;
 }
 

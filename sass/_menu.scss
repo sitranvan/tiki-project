@@ -7,7 +7,6 @@
     left: 0px;
     visibility: hidden;
     overflow: 0;
-
     &.show-on {
         opacity: 1;
         visibility: visible;
@@ -27,7 +26,6 @@
     transition-property: opacity;
     transition-duration: 0.3s;
     opacity: 0;
-
     &.show-on {
         opacity: 1;
     }

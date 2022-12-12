@@ -109,14 +109,12 @@ function showSearchMobileTablet() {
         headerHideOnInput.focus()
 
     })
-
     headerBackMobileTable.addEventListener("click", (e) => {
         headerHideOn.classList.remove("show-on")
         hederMobileTablet.style.display = "flex"
         document.body.style.overflow = "auto"
         container.style.display = "block"
     })
-
 }
 //* Show history pc
 function showHistoryPc() {
@@ -135,7 +133,6 @@ function showHistoryPc() {
             overlayNotHeader.classList.remove("show-on")
         }
     })
-
 }
 function showHistoryMobile() {
     headerHideOnInput.addEventListener('focus', (e) => {
@@ -280,10 +277,10 @@ sliderAuto.addEventListener("mouseleave", function (e) {
     autoNextSlider()
 })
 //* Scroll discount product
-const widthDiscountList = discountList.clientWidth
 nextBtnDiscountProduct.addEventListener("click", handleNextDiscountProduct)
 prevBtnDiscountProduct.addEventListener("click", handlePrevDiscountProduct)
 //* Next scroll product
+const widthDiscountList = discountList.clientWidth
 function handleNextDiscountProduct() {
     discountList.scrollLeft += widthDiscountList
     nextBtnDiscountProduct.style.opacity = 0
@@ -319,7 +316,6 @@ video.addEventListener("ended", (e) => {
     controlVideo.style.opacity = 1
     playVideo.style.display = "block"
     pauseVideo.style.display = "none"
-
 })
 
 

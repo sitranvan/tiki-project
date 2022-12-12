@@ -4569,6 +4569,8 @@ function renderDetail(img, name, sold, priceProduct, discount) {
     // document.querySelector(".exzoom_preview_img").src = img
 }
 
+
+
 function renderViewProduct(listProducts, limit = DEFAULT_LIMIT) {
     const htmls = listProducts.slice(0, limit).map(item => {
         return `
@@ -4640,8 +4642,8 @@ function renderViewProduct(listProducts, limit = DEFAULT_LIMIT) {
         `
 
     })
-    productList.innerHTML = htmls.join("");
 
+    productList.innerHTML = htmls.join("");
     const productItems = document.querySelectorAll(".product-item")
     Array.from(productItems).forEach(item => {
         item.addEventListener("click", () => {

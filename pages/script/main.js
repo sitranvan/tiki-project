@@ -228,7 +228,7 @@ function backToHome() {
 }
 backToHome()
 const navHomeLink = document.querySelector(".nav-content > a")
-const pageFilterListOne = document.querySelectorAll(".page-filter")[0]
+const pageFilterListOne = document.querySelectorAll(".page-filter")[0] || document.head
 const pageFilterItems = pageFilterListOne.querySelectorAll(".page-filter__item a")
 
 Array.from(pageFilterItems).forEach(item => {
