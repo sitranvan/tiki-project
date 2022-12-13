@@ -1,2 +1,3 @@
-# tiki-ui
-clone by Trần Văn Sĩ
+# tiki-project
+
+HTML, CSS, Javascript, SASS, Bootstrap 5
